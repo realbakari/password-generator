@@ -1,39 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Generate a secure Password</title>
+  <meta charset="UTF-8">
+  <title>JavaScript Password Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-	<meta name="title" content="Password generator  | Online tool">
-	<meta name="description" content="Generate strong, random, and unique passwords with the click of a button.">
-	<meta name="keywords" content="password">
-	<meta name="robots" content="index, follow">
-	<meta name="language" content="English">
+    <meta name="title" content="Password generator  | Online tool">
+    <meta name="description" content="Generate strong, random, and unique passwords with the click of a button.">
+    <meta name="keywords" content="password">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
 
 
+  
 </head>
-<body>
-	<h1>Password Generator</h1>
-	
-<center>
-	<form action="pswd_gen.php" method="Get">
-		<p>
-			<input class="Password" type="number" name="Password" placeholder="Select password max">
-		</p>
-		<p>
-			<input class="button" type="submit" value="Generate Password" />
-		</p>
-	</form></center>
 
-	<footer class="footer">
-		
-		<p>
-		&copy; 2019 Bakari Mustafa, Inc. All Rights Reserved. 
-		</p>
-	</footer>
+<body>
+
+  <main class="d-flex flex-column align-items-center">
+    <h1>Password Generator</h1>
+    
+    <form class="form-inline">
+        <input type="text" class="form-control" id="password" placeholder="Generate Password">
+    </form>
+    
+    <form class="form-inline">
+        <button type="button" class="btn btn-primary">Generate</button>
+        <button type="button" class="btn btn-outline-primary">Copy</button>
+    </form>
+    
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="pwLength">Password Length</label>
+            <select class="custom-select" id="pwLength">
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option selected="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+            </select>
+            <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" id="caps">
+                A-Z
+            </label>
+            <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" id="special">
+                !-?
+            </label>
+            <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" id="numbers" checked="checked">
+                1-9
+            </label>
+        </div>
+    </form>
+</main>
+  
+  
+
+    <script  src="./script.js"></script>
+
+
+
 
 </body>
+
 </html>
